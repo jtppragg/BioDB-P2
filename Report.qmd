@@ -1,0 +1,47 @@
+---
+title: "Lab 2 -- Data Representation Formats"
+author: "Student's Name and Surname"
+date: now
+execute:
+  echo: true
+  cache: false
+format:
+  html:
+    page-layout: full
+    number-sections: true
+    toc: true
+    toc-location: body
+    toc-depth: 2
+---
+
+## Initial setup {.unnumbered .unlisted}
+
+```{r}
+xquery <- function(xml_file, query, basex = "BaseX122.jar") {
+  cat(system(
+    sprintf("java -cp %s org.basex.BaseX -i '%s' -q '%s'", basex, xml_file, query),
+    intern = TRUE
+  ), sep = "\n")
+}
+```
+
+## First exercise
+
+Begin with your report here ...
+
+```{r}
+xquery("file.xml", "/query")
+```
+
+## Second exercise
+
+Continue with your report here ...
+
+```{r, results='asis'}
+cat('
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+
+</svg>
+')
+```
+
